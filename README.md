@@ -1,6 +1,5 @@
 
-        }
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -394,6 +393,179 @@
 
         .footer-col h4 {
             color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* RESPONSIVIDAD */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 3rem; }
+            .hero-image { text-align: center; }
+            .about { flex-direction: column-reverse; }
+            .contact-form { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .btn-submit { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="img/logo-infotech.png" alt="Infotech" class="logo-img" onerror="this.style.display='none'">
+            <div class="logo-title"><strong>INFO</strong>TECH</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <p class="hero-tagline">Soluciones digitales que impulsan tu negocio</p>
+            <h1>Tecnología corporativa para transformar tus ideas</h1>
+            <p>Ayudamos a empresas e instituciones a optimizar sus operaciones, desarrollar plataformas robustas y adoptar inteligencia artificial con estándares profesionales de nivel internacional.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn-primary">Agendar Consultoría</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/hero-business.jpg" alt="Transformación Digital Corporativa" placeholder="Imagen de equipo tecnológico de trabajo">
+        </div>
+    </section>
+
+    <section class="about" id="nosotros">
+        <div class="about-image">
+            <img src="img/about-team.jpg" alt="Equipo Infotech" placeholder="Imagen del equipo o infraestructura">
+        </div>
+        <div class="about-content">
+            <h2>Quiénes Somos</h2>
+            <p>En <strong>Infotech</strong>, nos dedicamos a diseñar e implementar arquitecturas digitales de alto rendimiento. Nuestro compromiso es dotar a las corporaciones con herramientas tecnológicas avanzadas que garanticen la escalabilidad, la seguridad de la información y la automatización inteligente.</p>
+            <p>Con sede en Montevideo, Uruguay, brindamos soporte y consultoría especializada a nivel regional, asegurando que cada solución impacte directamente en la rentabilidad y eficiencia de nuestros clientes.</p>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item">
+            <h3>99%</h3>
+            <p>Disponibilidad de Sistemas</p>
+        </div>
+        <div class="stat-item">
+            <h3>+50</h3>
+            <p>Procesos Automatizados</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>A Medida del Cliente</p>
+        </div>
+        <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Soporte e Infraestructura</p>
+        </div>
+    </section>
+
+    <section class="services" id="servicios">
+        <div class="services-intro">
+            <h2>Nuestras Soluciones Corporativas</h2>
+            <p>Desarrollamos ingeniería de software y automatizaciones alineadas a los objetivos estratégicos de su organización.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">01</div>
+                <h3>Automatización de Procesos</h3>
+                <p>Simplificamos y optimizamos flujos de trabajo internos para reducir costes y eliminar fallos operativos mediante integraciones inteligentes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">02</div>
+                <h3>Desarrollo Web Profesional</h3>
+                <p>Arquitectura y despliegue de sitios corporativos y aplicaciones web dinámicas: seguras, ultrarrápidas y optimizadas para alta demanda.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">03</div>
+                <h3>Software a Medida</h3>
+                <p>Diseño de sistemas a la medida exacta de las necesidades de su empresa, garantizando una infraestructura limpia, robusta y con proyección a futuro.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">04</div>
+                <h3>IA y Chatbots Inteligentes</h3>
+                <p>Implementación de Inteligencia Artificial avanzada para atención al cliente automatizada y análisis de datos en tiempo real las 24 horas del día.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+        <h2>Hablemos de su Próximo Proyecto</h2>
+        <p>Póngase en contacto con nuestro equipo de consultores IT para recibir una propuesta adaptada a su empresa.</p>
+        
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Formulario de prueba corporativo');">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" placeholder="Nombre de su compañía">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Corporativo</label>
+                <input type="email" id="email" required placeholder="juan@empresa.com">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono de Contacto</label>
+                <input type="tel" id="telefono" required placeholder="+598 099...">
+            </div>
+            <div class="form-group full-width">
+                <label for="mensaje">Requerimientos o Mensaje</label>
+                <textarea id="mensaje" rows="5" required placeholder="Describa brevemente las necesidades tecnológicas de su organización..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Solicitud de Información</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Infotech</h4>
+                <p>Soluciones digitales corporativas de alto impacto y rendimiento tecnológico.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto Directo</h4>
+                <p><strong>Teléfono:</strong> +598 099 810 399</p>
+                <p><strong>Email:</strong> infotechsoftware02@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Ubicación</h4>
+                <p>Montevideo, Uruguay</p>
+                <p><strong>Sitio oficial:</strong> www.infotech.digital</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Infotech. Todos los derechos reservados. Soluciones Digitales.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+        color: var(--white);
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
         }
