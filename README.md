@@ -1,23 +1,25 @@
+
+        }
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infotech | Soluciones Digitales Inteligentes</title>
+    <title>Infotech | Soluciones Digitales Corporativas</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables de color basadas en tu imagen */
+        /* Paleta de colores Corporativa */
         :root {
-            --bg-dark: #060913;
-            --bg-card: rgba(255, 255, 255, 0.03);
-            --border-glow: rgba(255, 255, 255, 0.1);
-            --neon-blue: #00f2fe;
-            --neon-purple: #9d4edd;
-            --neon-gold: #ffb703;
-            --text-main: #e2e8f0;
+            --primary: #0a2540;       /* Azul marino profundo */
+            --secondary: #635bff;     /* Azul acento / Tecnológico */
+            --text-dark: #1c2a38;     /* Texto principal */
+            --text-light: #64748b;    /* Texto secundario */
+            --bg-light: #f8fafc;      /* Fondo gris muy claro */
+            --white: #ffffff;
         }
 
         * {
@@ -31,301 +33,539 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            /* Efecto de fondo con circuitos/puntos sutiles */
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(157, 78, 221, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(0, 242, 254, 0.15) 0%, transparent 40%);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.7;
         }
 
-        /* BARRA DE NAVEGACIÓN MODERNA (FLOTANTE) */
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* BARRA DE NAVEGACIÓN CORPORATIVA */
         nav {
-            background: rgba(6, 9, 19, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-glow);
-            padding: 1rem 2rem;
+            background: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
-        .logo-container {
+        .logo-area {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
-        /* Si tienes el archivo de tu logo, descomenta la etiqueta img en el HTML y usa esta clase */
         .logo-img {
-            height: 45px;
+            height: 40px; /* Ajusta según el tamaño de tu logo */
             width: auto;
         }
 
-        .logo-text {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .logo-title {
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+            color: var(--primary);
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--neon-blue);
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
-        }
-
-        /* SECCIÓN HERO (BIENVENIDA FUTURISTA) */
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
+            gap: 30px;
+            list-style: none;
         }
 
-        .hero-slogan-top {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.1rem;
-            color: var(--neon-blue);
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
-        }
-
-        .hero h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.2;
-            max-width: 900px;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-        }
-
-        .hero h2 span {
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            max-width: 650px;
-            margin-bottom: 2.5rem;
-        }
-
-        .btn-cyber {
-            font-family: 'Orbitron', sans-serif;
-            background: transparent;
-            color: #ffffff;
-            padding: 15px 35px;
+        .nav-menu a {
+            color: var(--text-light);
             text-decoration: none;
-            border-radius: 4px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            border: 2px solid var(--neon-purple);
-            box-shadow: 0 0 15px rgba(157, 78, 221, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
         }
 
-        .btn-cyber:hover {
-            background: var(--neon-purple);
-            box-shadow: 0 0 30px rgba(157, 78, 221, 0.6);
-            transform: scale(1.05);
+        .nav-menu a:hover {
+            color: var(--secondary);
         }
 
-        /* SECCIÓN DE SERVICIOS (TARJETAS GLOW / REACCIÓN NEÓN) */
-        .services-section {
-            padding: 6rem 2rem;
-            max-width: 1300px;
-            margin: 0 auto;
+        .btn-nav {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.9rem !important;
         }
 
-        .section-header {
+        .btn-nav:hover {
+            background: var(--secondary);
+        }
+
+        /* SECCIÓN HERO (BIENVENIDA EMPRESARIAL) */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 70vh;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-tagline {
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(99, 91, 255, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        /* SECCIÓN SOBRE NOSOTROS (NUEVA INFO) */
+        .about {
+            padding: 6rem 5%;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* SECCIÓN ESTADÍSTICAS (NUEVA INFO) */
+        .stats {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 5%;
+            display: flex;
+            justify-content: space-around;
             text-align: center;
-            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 30px;
         }
 
-        .section-header h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
+        .stat-item h3 {
+            color: var(--white);
+            font-size: 3rem;
             margin-bottom: 0.5rem;
         }
 
-        .section-header p {
-            color: var(--neon-blue);
-            font-style: italic;
+        .stat-item p {
+            color: #94a3b8;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* SECCIÓN DE SERVICIOS CORPORATIVOS */
+        .services {
+            padding: 6rem 5%;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .services-intro {
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .services-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .services-intro p {
+            color: var(--text-light);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
-        }
-
-        /* Estilo base de tarjeta tecnológica (Efecto cristal translúcido) */
-        .service-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--border-glow);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            overflow: hidden;
-        }
-
-        .service-number {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            opacity: 0.15;
-            transition: opacity 0.3s ease;
-        }
-
-        .service-card h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-            color: #ffffff;
-        }
-
-        .service-card p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        /* Variaciones de Neón individuales basadas en tu gráfico */
-        .card-blue:hover {
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.25);
-            transform: translateY(-5px);
-        }
-        .card-blue:hover .service-number, .card-blue:hover h3 { color: var(--neon-blue); opacity: 1; }
-
-        .card-purple:hover {
-            border-color: var(--neon-purple);
-            box-shadow: 0 0 25px rgba(157, 78, 221, 0.25);
-            transform: translateY(-5px);
-        }
-        .card-purple:hover .service-number, .card-purple:hover h3 { color: var(--neon-purple); opacity: 1; }
-
-        .card-gold:hover {
-            border-color: var(--neon-gold);
-            box-shadow: 0 0 25px rgba(255, 183, 3, 0.25);
-            transform: translateY(-5px);
-        }
-        .card-gold:hover .service-number, .card-gold:hover h3 { color: var(--neon-gold); opacity: 1; }
-
-
-        /* SECCIÓN VALORES (BADGES DE ALTO IMPACTO) */
-        .values-section {
-            background: rgba(255, 255, 255, 0.01);
-            border-top: 1px solid var(--border-glow);
-            border-bottom: 1px solid var(--border-glow);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .values-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .value-badge {
-            font-family: 'Orbitron', sans-serif;
-            background: rgba(0, 242, 254, 0.03);
-            border: 1px solid rgba(0, 242, 254, 0.2);
-            padding: 12px 35px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            color: var(--neon-blue);
-            text-transform: uppercase;
-            box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .value-badge:hover {
-            background: rgba(0, 242, 254, 0.1);
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
-            transform: scale(1.05);
-        }
-
-        /* PIE DE PÁGINA / CONTACTO COMPACTO TECH */
-        footer {
-            padding: 5rem 2rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            border-bottom: 1px solid var(--border-glow);
-            padding-bottom: 3rem;
-            margin-bottom: 2rem;
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
         }
 
-        .footer-info h4 {
-            font-family: 'Orbitron', sans-serif;
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+            border-color: var(--secondary);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(99, 91, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* FORMULARIO DE CONTACTO (NUEVA INFO) */
+        .contact-section {
+            padding: 6rem 5%;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
             font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #64748b;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.15);
+        }
+
+        .btn-submit {
+            grid-column: span 2;
+            background: var(--primary);
+            color: var(--white);
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background: var(--secondary);
+        }
+
+        /* PIE DE PÁGINA CORPORATIVO */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            padding: 4rem 5% 2rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
             margin-bottom: 10px;
         }
 
-        .footer-info p {
-            color: #ffffff;
-            font-size: 1.05rem;
-            font-weight: 600;
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
+
+        /* RESPONSIVIDAD */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 3rem; }
+            .hero-image { text-align: center; }
+            .about { flex-direction: column-reverse; }
+            .contact-form { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .btn-submit { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="img/logo-infotech.png" alt="Infotech" class="logo-img" onerror="this.style.display='none'">
+            <div class="logo-title"><strong>INFO</strong>TECH</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <p class="hero-tagline">Soluciones digitales que impulsan tu negocio</p>
+            <h1>Tecnología corporativa para transformar tus ideas</h1>
+            <p>Ayudamos a empresas e instituciones a optimizar sus operaciones, desarrollar plataformas robustas y adoptar inteligencia artificial con estándares profesionales de nivel internacional.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn-primary">Agendar Consultoría</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/hero-business.jpg" alt="Transformación Digital Corporativa" placeholder="Imagen de equipo tecnológico de trabajo">
+        </div>
+    </section>
+
+    <section class="about" id="nosotros">
+        <div class="about-image">
+            <img src="img/about-team.jpg" alt="Equipo Infotech" placeholder="Imagen del equipo o infraestructura">
+        </div>
+        <div class="about-content">
+            <h2>Quiénes Somos</h2>
+            <p>En <strong>Infotech</strong>, nos dedicamos a diseñar e implementar arquitecturas digitales de alto rendimiento. Nuestro compromiso es dotar a las corporaciones con herramientas tecnológicas avanzadas que garanticen la escalabilidad, la seguridad de la información y la automatización inteligente.</p>
+            <p>Con sede en Montevideo, Uruguay, brindamos soporte y consultoría especializada a nivel regional, asegurando que cada solución impacte directamente en la rentabilidad y eficiencia de nuestros clientes.</p>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item">
+            <h3>99%</h3>
+            <p>Disponibilidad de Sistemas</p>
+        </div>
+        <div class="stat-item">
+            <h3>+50</h3>
+            <p>Procesos Automatizados</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>A Medida del Cliente</p>
+        </div>
+        <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Soporte e Infraestructura</p>
+        </div>
+    </section>
+
+    <section class="services" id="servicios">
+        <div class="services-intro">
+            <h2>Nuestras Soluciones Corporativas</h2>
+            <p>Desarrollamos ingeniería de software y automatizaciones alineadas a los objetivos estratégicos de su organización.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">01</div>
+                <h3>Automatización de Procesos</h3>
+                <p>Simplificamos y optimizamos flujos de trabajo internos para reducir costes y eliminar fallos operativos mediante integraciones inteligentes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">02</div>
+                <h3>Desarrollo Web Profesional</h3>
+                <p>Arquitectura y despliegue de sitios corporativos y aplicaciones web dinámicas: seguras, ultrarrápidas y optimizadas para alta demanda.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">03</div>
+                <h3>Software a Medida</h3>
+                <p>Diseño de sistemas a la medida exacta de las necesidades de su empresa, garantizando una infraestructura limpia, robusta y con proyección a futuro.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">04</div>
+                <h3>IA y Chatbots Inteligentes</h3>
+                <p>Implementación de Inteligencia Artificial avanzada para atención al cliente automatizada y análisis de datos en tiempo real las 24 horas del día.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+        <h2>Hablemos de su Próximo Proyecto</h2>
+        <p>Póngase en contacto con nuestro equipo de consultores IT para recibir una propuesta adaptada a su empresa.</p>
+        
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Formulario de prueba corporativo');">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" placeholder="Nombre de su compañía">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Corporativo</label>
+                <input type="email" id="email" required placeholder="juan@empresa.com">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono de Contacto</label>
+                <input type="tel" id="telefono" required placeholder="+598 099...">
+            </div>
+            <div class="form-group full-width">
+                <label for="mensaje">Requerimientos o Mensaje</label>
+                <textarea id="mensaje" rows="5" required placeholder="Describa brevemente las necesidades tecnológicas de su organización..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Solicitud de Información</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Infotech</h4>
+                <p>Soluciones digitales corporativas de alto impacto y rendimiento tecnológico.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto Directo</h4>
+                <p><strong>Teléfono:</strong> +598 099 810 399</p>
+                <p><strong>Email:</strong> infotechsoftware02@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Ubicación</h4>
+                <p>Montevideo, Uruguay</p>
+                <p><strong>Sitio oficial:</strong> www.infotech.digital</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Infotech. Todos los derechos reservados. Soluciones Digitales.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
         .copyright {
             text-align: center;
