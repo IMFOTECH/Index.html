@@ -856,13 +856,13 @@
             <div class="contact-details">
                 <div>
                     <h3>Hablemos de su proyecto</h3>
-                    <p>Consulte con nuestro equipo de ingenieros para recibir un análisis personalizado y potenciar su infraestructura IT.</p>
+               <p>Consulte con nuestro equipo de ingenieros para recibir un análisis personalizado y potenciar su infraestructura IT.</p>
                 </div>
                 
                 <div class="info-rows">
                     <div class="info-row">
                         <label>Línea Directa</label>
-                        <span>+598 099 810 399</span>
+                        <span>+598 99 810 399</span>
                     </div>
                     <div class="info-row">
                         <label>Correo Electrónico</label>
@@ -872,9 +872,13 @@
                         <label>Oficinas</label>
                         <span>Montevideo, Uruguay</span>
                     </div>
+               
                 </div>
+           
+            
             </div>
             
+           
             <div class="contact-form-wrapper">
                 <form class="form-grid" id="contactForm">
                     <div class="input-group">
