@@ -1,7 +1,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infotech | Soluciones Digitales Corporativas</title>
     
     <!-- Tipografías Corporativas Premium -->
@@ -293,6 +293,64 @@
             line-height: 1.6;
         }
 
+        /* METODOLOGÍA DE TRABAJO */
+        .process-section {
+            padding: 8rem 8%;
+            background-color: var(--white);
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-cyan);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--brand-gradient);
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 800;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 86, 179, 0.2);
+            transform: rotate(-5deg);
+        }
+
+        .process-step h4 {
+            color: var(--dark-blue);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .process-step p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
         /* VALORES E IDENTIDAD */
         .identity-section {
             padding: 8rem 8%;
@@ -362,6 +420,48 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        /* TECNOLOGÍAS */
+        .tech-section {
+            background-color: var(--white);
+            padding: 5rem 8% 8rem;
+            text-align: center;
+        }
+
+        .tech-section h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+            margin-bottom: 3rem;
+        }
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tech-tag {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            border-color: var(--brand-cyan);
+            color: var(--brand-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(51, 204, 255, 0.15);
+            background: var(--white);
         }
 
         /* FORMULARIO Y CONTACTO */
@@ -570,7 +670,7 @@
     <!-- MENÚ DE NAVEGACIÓN CON LOGO RECREADO EN SVG -->
     <nav>
         <a href="#inicio" class="brand-container">
-            <!-- LOGO VECTORIAL INSPIRADO EN TU IMAGEN (No necesita archivo externo) -->
+            <!-- LOGO VECTORIAL INSPIRADO EN TU IMAGEN -->
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
                 <defs>
                     <linearGradient id="orbBg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -612,6 +712,7 @@
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#soluciones">Servicios</a></li>
+            <li><a href="#proceso">Metodología</a></li>
             <li><a href="#identidad">Nosotros</a></li>
             <li><a href="#contacto" class="cta-nav">Contacto Empresarial</a></li>
         </ul>
@@ -627,7 +728,7 @@
         <div class="hero-visual">
             <div class="hero-image-container">
                 <!-- Imagen tecnológica corporativa -->
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000&auto=format&fit=crop" alt="">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000&auto=format&fit=crop" alt="[attachment_0](attachment)">
             </div>
         </div>
     </section>
@@ -666,6 +767,37 @@
         </div>
     </section>
 
+    <!-- SECCIÓN METODOLOGÍA DE TRABAJO -->
+    <section class="process-section" id="proceso">
+        <div class="section-title-wrapper">
+            <h2>Nuestra Metodología</h2>
+            <p>Un proceso de ingeniería estructurado para garantizar el éxito, la seguridad y la escalabilidad de cada proyecto tecnológico.</p>
+        </div>
+        
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Consultoría Inicial</h4>
+                <p>Auditamos sus necesidades operativas, identificamos cuellos de botella y definimos una hoja de ruta técnica precisa.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Arquitectura IT</h4>
+                <p>Diseñamos la estructura del sistema seleccionando las mejores tecnologías, garantizando escalabilidad a largo plazo.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Desarrollo Ágil</h4>
+                <p>Construimos su solución mediante entregas iterativas, asegurando feedback continuo y control de calidad estricto.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Despliegue y Soporte</h4>
+                <p>Lanzamiento en entornos seguros Cloud con monitoreo 24/7, mantenimiento preventivo y soporte técnico continuo.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN DE IDENTIDAD Y VALORES -->
     <section class="identity-section" id="identidad">
         <div class="identity-content">
@@ -696,6 +828,25 @@
                 <!-- Imagen corporativa -->
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop" alt="">
             </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE TECNOLOGÍAS -->
+    <section class="tech-section">
+        <h3>Stack Tecnológico que Dominamos</h3>
+        <div class="tech-grid">
+            <div class="tech-tag">HTML5</div>
+            <div class="tech-tag">CSS3</div>
+            <div class="tech-tag">JavaScript</div>
+            <div class="tech-tag">React / Next.js</div>
+            <div class="tech-tag">Node.js</div>
+            <div class="tech-tag">Python / Django</div>
+            <div class="tech-tag">Amazon Web Services (AWS)</div>
+            <div class="tech-tag">Docker & Kubernetes</div>
+            <div class="tech-tag">TensorFlow (IA)</div>
+            <div class="tech-tag">PostgreSQL</div>
+            <div class="tech-tag">Ciberseguridad</div>
+            <div class="tech-tag">Integración API REST</div>
         </div>
     </section>
 
